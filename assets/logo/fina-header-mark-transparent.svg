@@ -1,0 +1,22 @@
+<svg width="180" height="82" viewBox="0 0 180 82" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FINA logo mark">
+  <text x="90" y="45"
+        text-anchor="middle"
+        font-family="Inter, Helvetica Neue, Arial, sans-serif"
+        font-size="42"
+        font-weight="850"
+        letter-spacing="3.6"
+        fill="#00284A">FINA</text>
+
+  <line x1="38" y1="58" x2="142" y2="58"
+        stroke="#00284A"
+        stroke-width="2.4"
+        stroke-linecap="round"/>
+
+  <text x="90" y="74"
+        text-anchor="middle"
+        font-family="Inter, Helvetica Neue, Arial, sans-serif"
+        font-size="8.5"
+        font-weight="650"
+        letter-spacing="0.4"
+        fill="#00284A">Finance &amp; AI, HUFS</text>
+</svg>
