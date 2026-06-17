@@ -786,6 +786,71 @@ h3 {
   font-weight: 900;
 }
 
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 30px;
+  border: 1px solid rgba(125, 190, 230, 0.34);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top right, rgba(173, 216, 230, 0.18), transparent 34%),
+    #ffffff;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(31, 78, 121, 0.88), rgba(125, 190, 230, 0.58));
+}
+
+.contact-intro {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 24px;
+  color: var(--text);
+  font-size: 1.04rem;
+  line-height: 1.7;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
+  gap: 18px;
+}
+
+.contact-item {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid rgba(125, 190, 230, 0.28);
+  border-radius: 16px;
+  background: rgba(246, 248, 251, 0.82);
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contact-item a {
+  font-weight: 900;
+}
+
+.contact-item p {
+  margin: 0;
+  color: var(--text);
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 28px 0;
@@ -861,6 +926,10 @@ h3 {
 
   .news-grid {
     column-count: 1;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
   }
 
   .footer-content {
@@ -1203,6 +1272,14 @@ grid-template-columns: 1fr;
 
   .publication-card {
     padding: 22px 20px;
+  }
+
+  .contact-card {
+    padding: 26px 20px;
+  }
+
+  .contact-item {
+    padding: 18px;
   }
 
   .news-card-body {
