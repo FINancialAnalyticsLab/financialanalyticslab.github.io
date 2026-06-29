@@ -360,10 +360,13 @@ h3 {
 .students-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: 24px;
+  align-items: stretch;
 }
 
 .student-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   min-width: 0;
   border: 1px solid rgba(125, 190, 230, 0.32);
@@ -374,30 +377,42 @@ h3 {
   box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
 }
 
-.student-photo {
+.students-grid .student-card .student-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  overflow: hidden;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
+  max-height: 320px;
   border-bottom: 1px solid rgba(125, 190, 230, 0.24);
+  border-radius: 18px 18px 0 0;
   background:
     linear-gradient(135deg, rgba(246, 248, 251, 0.98), rgba(232, 244, 252, 0.92)),
     var(--light-bg);
 }
 
-.student-photo img {
+.students-grid .student-card .student-photo img {
   display: block;
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  min-width: 0;
   object-fit: contain;
   object-position: center center;
+  border-radius: inherit;
 }
 
-.student-photo-placeholder {
+.students-grid .student-card .student-photo-placeholder {
+  border: 1px dashed rgba(125, 190, 230, 0.45);
+  border-bottom: 1px dashed rgba(125, 190, 230, 0.45);
   background:
-    linear-gradient(135deg, rgba(246, 248, 251, 0.98), rgba(226, 242, 252, 0.92)),
-    var(--light-bg);
+    linear-gradient(145deg, rgba(247, 251, 255, 0.96), rgba(232, 241, 249, 0.92));
 }
 
 .student-info {
+  flex: 1 1 auto;
   padding: 22px;
 }
 
@@ -436,6 +451,12 @@ h3 {
   color: var(--primary);
   font-weight: 800;
   overflow-wrap: anywhere;
+}
+
+@media (max-width: 1100px) {
+  .students-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .member-profile-card .member-name {
@@ -1028,6 +1049,12 @@ h3 {
 
   .footer-content {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .students-grid {
+    grid-template-columns: 1fr;
   }
 }
 
