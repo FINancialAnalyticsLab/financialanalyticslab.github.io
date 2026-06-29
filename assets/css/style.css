@@ -357,6 +357,87 @@ h3 {
     #ffffff;
 }
 
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.student-card {
+  overflow: hidden;
+  min-width: 0;
+  border: 1px solid rgba(125, 190, 230, 0.32);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top left, rgba(173, 216, 230, 0.14), transparent 36%),
+    #ffffff;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
+}
+
+.student-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-bottom: 1px solid rgba(125, 190, 230, 0.24);
+  background:
+    linear-gradient(135deg, rgba(246, 248, 251, 0.98), rgba(232, 244, 252, 0.92)),
+    var(--light-bg);
+}
+
+.student-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.student-photo-placeholder {
+  background:
+    linear-gradient(135deg, rgba(246, 248, 251, 0.98), rgba(226, 242, 252, 0.92)),
+    var(--light-bg);
+}
+
+.student-info {
+  padding: 22px;
+}
+
+.student-name {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: 1.14rem;
+  line-height: 1.35;
+}
+
+.student-major,
+.student-research,
+.student-email {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.94rem;
+  line-height: 1.58;
+}
+
+.student-major,
+.student-research {
+  margin-bottom: 12px;
+}
+
+.student-label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--primary);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.student-email a {
+  color: var(--primary);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
 .member-profile-card .member-name {
   color: var(--text);
   font-size: 1.28rem;
@@ -926,6 +1007,10 @@ h3 {
     width: min(220px, 100%);
   }
 
+  .students-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .two-column,
   .grid-3,
   .member-grid {
@@ -1277,6 +1362,14 @@ grid-template-columns: 1fr;
 
   .member-profile-card {
     padding: 28px 22px;
+  }
+
+  .students-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-info {
+    padding: 20px;
   }
 
   .publication-card {
